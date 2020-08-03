@@ -2,6 +2,7 @@ import requests
 #from requests_toolbelt.multipart.encoder import MultipartEncoder
 import re
 import sys
+import time
 
 
 def login(host):
@@ -76,8 +77,9 @@ def check(ck1,ck2):
         return -1
 
 if __name__ == "__main__":
-    host =sys.argv[1]
-    #host="192.168.56.101:8000"
+    time.sleep(20)
+    #host =sys.argv[1]
+    host="192.168.56.101:8000"
    # path = '.'
     ck=login(host)
     ck1=ck[0]
