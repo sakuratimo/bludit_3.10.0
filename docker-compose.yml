@@ -1,0 +1,38 @@
+version: "3"
+services:
+  web:
+    image: bludit/docker:3.12.0
+    container_name:  web-app
+    ports:
+       - "8000:80"
+    restart: always
+    stdin_open: true
+    tty: true
+
+
+  config:
+    build:
+        context: .
+        dockerfile: Dockerfile_config
+    depends_on:
+      - web
+    container_name: config-app
+
+
+  poc:
+    build:
+        context: .
+        dockerfile: Dockerfile_poc
+    depends_on:
+      - web
+      - config
+    container_name: poc-app
+
+  ids:
+    image: fixel/zeek:latest
+    network_mode: service:web
+    container_name: zeek
+    volumes:
+      - ./ids/logs:/usr/local/zeek/logs
+      - ./ids/policy_detect_fpm:/usr/local/zeek/share/zeek/policy/policy_detect_fpm
+    command: -C -i eth0 policy/policy_detect_fpm
