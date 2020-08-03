@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: bludit/docker:3.12.0
+    image: bludit/docker:3.10.0
     container_name:  web-app
     ports:
        - "8000:80"
@@ -28,11 +28,11 @@ services:
       - config
     container_name: poc-app
 
-  ids:
-    image: fixel/zeek:latest
-    network_mode: service:web
-    container_name: zeek
-    volumes:
-      - ./ids/logs:/usr/local/zeek/logs
-      - ./ids/policy_detect_fpm:/usr/local/zeek/share/zeek/policy/policy_detect_fpm
-    command: -C -i eth0 policy/policy_detect_fpm
+  # ids:
+  #   image: fixel/zeek:latest
+  #   network_mode: service:web
+  #   container_name: zeek
+  #   volumes:
+  #     - ./ids/logs:/usr/local/zeek/logs
+  #     - ./ids/policy_detect_fpm:/usr/local/zeek/share/zeek/policy/policy_detect_fpm
+  #   command: -C -i eth0 policy/policy_detect_fpm
