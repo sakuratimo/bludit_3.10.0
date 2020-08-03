@@ -78,8 +78,8 @@ def check(ck1,ck2):
 
 if __name__ == "__main__":
     time.sleep(20)
-    #host =sys.argv[1]
-    host="192.168.56.101:8000"
+    host =sys.argv[1]
+    #host="192.168.56.101:8000"
    # path = '.'
     ck=login(host)
     ck1=ck[0]
