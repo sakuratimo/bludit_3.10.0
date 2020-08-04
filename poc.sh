@@ -13,14 +13,11 @@
 #pip3 install -r /requirements_poc.txt
 #echo 'Requests addon installed'
 pip3 install requests  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+#pip3 install -r /requirements_config.txt
+#echo 'Requests addon installed'
 chmod +x /poc.py
-#echo 'Permission of poc.py granted'
-#echo 'ready to run poc.py'
-#echo 'exp.py executed'
-#echo 'Permission of exp.py granted'
-#echo 'ready to run exp.py'
-
-python3 /poc.py web
+#echo 'ready to run config.py'
+python3 /poc.py  web
 #echo 'exp.py executed'
 
 
