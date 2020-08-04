@@ -77,7 +77,8 @@ def check(ck1,ck2):
         return -1
 
 if __name__ == "__main__":
-    time.sleep(50)
+    time.sleep(20)
+    print('PoC success!')
     host =sys.argv[1]
     #host="192.168.56.101:8000"
    # path = '.'
