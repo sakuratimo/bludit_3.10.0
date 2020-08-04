@@ -12,6 +12,7 @@
 #apt install python3-pip -y
 #pip3 install -r /requirements_poc.txt
 #echo 'Requests addon installed'
+sleep 50
 pip3 install requests  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 #pip3 install -r /requirements_config.txt
 #echo 'Requests addon installed'
