@@ -129,8 +129,8 @@ def check(host):
 
 
 if __name__ == "__main__":
-    #host =sys.argv[1]
-    host= "192.168.56.101:8000"
+    host =sys.argv[1]
+    #host= "192.168.56.101:8000"
     setlag(host)
     setadmin(host)
     result=login(host)
