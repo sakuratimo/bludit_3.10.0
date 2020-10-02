@@ -44,7 +44,7 @@ services:
   bot:
     build:
         context: .
-        dockerfile: Dockerfile_botb     
+        dockerfile: Dockerfile_bot
     depends_on:
         - web
         - config
