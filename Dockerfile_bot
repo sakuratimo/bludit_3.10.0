@@ -1,0 +1,10 @@
+FROM python:latest
+
+WORKDIR /usr/src/api
+ADD ./bot.sh /bot.sh
+ADD ./bot.py /bot.py
+ADD requirements_bot.txt /requirements_bot.txt
+RUN chmod +x /bot.sh
+CMD ["bash", "-c", "echo 1 && bash /bot.sh"]
+
+

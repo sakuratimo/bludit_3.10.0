@@ -1,0 +1,4 @@
+FROM nginx:latest
+COPY ./Bludit.html /usr/share/nginx/html
+COPY ./Bludit_files //usr/share/nginx/html/Bludit_files
+

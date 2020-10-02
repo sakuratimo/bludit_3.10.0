@@ -7,16 +7,22 @@
 #deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
 #deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
 #EOF
-#apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 3B4FE6ACC0B21F32
 #apt update
+#apt install python3.6 -y
+#apt install python3-pip -y
+#pip3 install -r /requirements_poc.txt
+#echo 'Requests addon installed'
 
-#pip3 install --upgrade pip
-pip install requests  -i http://mirrors.aliyun.com/pypi/simple/  --trusted-host mirrors.aliyun.com
-#pip install requests
+pip3 install requests  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 #pip3 install -r /requirements_config.txt
 #echo 'Requests addon installed'
-chmod +x /config.py
+chmod +x /bot.py
 #echo 'ready to run config.py'
-python3 /config.py  web
-#echo 'config.py executed'
+python3 /bot.py  nginx-xss
 
+
+while true;
+do 
+   sleep 10
+
+done

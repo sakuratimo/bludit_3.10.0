@@ -1,0 +1,1 @@
+@load ./detect_xss.zeek
