@@ -45,7 +45,7 @@ services:
     build:
         context: .
         dockerfile: Dockerfile_botb     
-   depends_on:
+    depends_on:
         - web
         - config
         - nginx-xss
@@ -53,10 +53,10 @@ services:
   
 
   ids:
-      image: fixel/zeek:latest
-      network_mode: service:web
-      container_name: zeek
-      volumes:
+    image: fixel/zeek:latest
+    network_mode: service:web
+    container_name: zeek
+    volumes:
         - ./ids/logs:/usr/local/zeek/logs
         - ./ids/policy_detect_xss:/usr/local/zeek/share/zeek/policy/policy_detect_xss
-      command: -C -i eth0 policy/policy_detect_xss
+    command: -C -i eth0 policy/policy_detect_xss
